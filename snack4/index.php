@@ -1,4 +1,14 @@
 <?php
+$array = [];
+
+for ($i = 0; count($array) < 15; $i++) {
+
+    $num = rand(1, 100);
+    if (!in_array($num, $array)) {
+        $array[] = $num;
+    }
+}
+
 
 ?>
 
@@ -12,8 +22,13 @@
 </head>
 
 <body>
+    <h2>Lista</h2>
+    <ul>
+        <?php foreach ($array as $index => $elem) { ?>
+            <li><?php echo ($index + 1) . '° numero: ' . $elem ?></li>
+        <?php } ?>
 
-
+    </ul>
 </body>
 
 </html>
